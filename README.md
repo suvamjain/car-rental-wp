@@ -21,6 +21,7 @@ This API uses Nodejs and Expressjs for backend functionalities. Firebase Realtim
     - Model
     - Seating Capacity
     - Rent Per Day
+    - Status
  
  ### Firebase Database URL -
   - Firebase Real Time Database can be accessed by collaborators at url - https://car-rental-wp.firebaseio.com . Snaspshots of sample data in database has been attached below.
