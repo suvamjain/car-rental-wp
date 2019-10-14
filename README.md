@@ -25,9 +25,8 @@ This API uses Nodejs and Expressjs for backend functionalities. Firebase Realtim
  ### Firebase Database URL -
   - Firebase Real Time Database can be accessed by collaborators at url - https://car-rental-wp.firebaseio.com . Snaspshots of sample data in database has been attached below.
   
-  - Cars <img height="200" src="https://github.com/suvamjain/car-rental-wp/blob/master/Firebase%20db%20samples/Cars%20Model.png">
-
-  - Users <img height="200" src="https://github.com/suvamjain/car-rental-wp/blob/master/Firebase%20db%20samples/Users%20Model.png">
+  <img height="200" src="https://github.com/suvamjain/car-rental-wp/blob/master/Firebase%20db%20samples/Cars%20Model.png">
+  <img height="200" src="https://github.com/suvamjain/car-rental-wp/blob/master/Firebase%20db%20samples/Users%20Model.png">
   
 ### Endpoints -
   - Add Car (POST Request with body params)
