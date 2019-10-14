@@ -52,4 +52,8 @@ This API uses Nodejs and Expressjs for backend functionalities. Firebase Realtim
   - handling params and headers
   
 ### How to run the application ?
-  Open the POSTMAN collection and execute the sample requests for each of the 6 endpoints discussed above. [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/01df9583b863a5c395a4)
+  - To run this API online, open the POSTMAN collection and execute the sample requests for each of the 6 endpoints discussed above. [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/01df9583b863a5c395a4)
+  - For offline execution clone this github repository, 
+    - execute `npm install` to install all necessary Node.js packages. 
+    - execute `node index.js` to execute the server file 
+    - Finally open POSTMAN collection and use base url as - http://localhost:5000/ for all the API requests.
