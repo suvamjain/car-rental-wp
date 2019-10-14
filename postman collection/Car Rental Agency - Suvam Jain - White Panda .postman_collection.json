@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "57ec1559-0996-401a-9896-75ff96281187",
+		"name": "Car Rental Agency - Suvam Jain - White Panda ",
+		"description": "A Car Rental API, which provides various endpoints to fulfill all the needs of such agencies. This api has 5 major endpoints whose sample requests are attached with this collection.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register New User",
+			"item": [
+				{
+					"name": "Incomplete User Details - Invalid Case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Phone\" : \"123123123\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wrong Phone Number - Invalid Case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\" : \"Test User\",\n\t\"Phone\" : \"123123123\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Phone Number Already Registered - Invalid Case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\" : \"Test User\",\n\t\"Phone\" : \"1234567890\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Registration Successful",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Name\" : \"Test User\",\n\t\"Phone\" : \"1231231230\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add New Car",
+			"item": [
+				{
+					"name": "New Car Added Successfully",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehNo\" : 40,\n\t\"Model\" : \"Tesla\",\n\t\"SeatCap\" : \"4\",\n\t\"RentDay\" : \"1200\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/add",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car with existing Number - Invalid Case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehNo\" : 1,\n\t\"Model\" : \"Tesla\",\n\t\"SeatCap\" : \"4\",\n\t\"RentDay\" : \"1200\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/add",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incomplete Details - Invalid Case",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehNo\" : 1,\n\t\"Model\" : \"Tesla\",\n\t\"SeatCap\" : \"4\"\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/add",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search Car using filter",
+			"item": [
+				{
+					"name": "Duration Not Specified - Invalid Case",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/search?StartDate=2019-10-16",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "StartDate",
+									"value": "2019-10-16"
+								},
+								{
+									"key": "NoOfDays",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "Model",
+									"value": "Honda City",
+									"disabled": true
+								},
+								{
+									"key": "SeatCap",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by Booking Dates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/search?StartDate=2019-10-16&NoOfDays=2",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "StartDate",
+									"value": "2019-10-16"
+								},
+								{
+									"key": "NoOfDays",
+									"value": "2"
+								},
+								{
+									"key": "Model",
+									"value": "Honda City",
+									"disabled": true
+								},
+								{
+									"key": "SeatCap",
+									"value": "4",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter By Booking Dates and Model",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/search?StartDate=2019-10-15&NoOfDays=2&Model=TesLA",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "StartDate",
+									"value": "2019-10-15"
+								},
+								{
+									"key": "NoOfDays",
+									"value": "2"
+								},
+								{
+									"key": "SeatCap",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "Model",
+									"value": "TesLA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter By Booking Date and Seating Capacity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/search?StartDate=2019-10-17&NoOfDays=2&SeatCap=4",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "StartDate",
+									"value": "2019-10-17"
+								},
+								{
+									"key": "NoOfDays",
+									"value": "2"
+								},
+								{
+									"key": "SeatCap",
+									"value": "4"
+								},
+								{
+									"key": "Model",
+									"value": "TesLa",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter by Booking Dates, Seat Capacity, Model",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/search?StartDate=2019-10-18&NoOfDays=2&Model=Suzuki&SeatCap=4",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "StartDate",
+									"value": "2019-10-18"
+								},
+								{
+									"key": "NoOfDays",
+									"value": "2"
+								},
+								{
+									"key": "Model",
+									"value": "Suzuki"
+								},
+								{
+									"key": "SeatCap",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book Car",
+			"item": [
+				{
+					"name": "Incomplete Details - Invalid Case",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehicleNo\" : 10,\n\t\"StartDate\": \"2019-10-15\",\n\t\"NoOfDays\" : 1\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/book",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unauthorized User - Invalid Case",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehicleNo\" : 10,\n\t\"PhoneNo\" : \"1234567899\",\n\t\"StartDate\": \"2019-10-14\",\n\t\"NoOfDays\" : 1\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/book",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Not Found - Invalid Case",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehicleNo\" : 101,\n\t\"PhoneNo\" : \"1234567890\",\n\t\"StartDate\": \"2019-10-15\",\n\t\"NoOfDays\" : 1\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/book",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car Not Available - Invalid Case",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehicleNo\" : 1,\n\t\"PhoneNo\" : \"1234567890\",\n\t\"StartDate\": \"2019-10-14\",\n\t\"NoOfDays\" : 2\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/book",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Booking Successful",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"VehicleNo\" : 1,\n\t\"PhoneNo\" : \"1234567890\",\n\t\"StartDate\": \"2019-10-16\",\n\t\"NoOfDays\" : 1\n}"
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/book",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Car",
+			"item": [
+				{
+					"name": "Vehicle Not Found - Invalid Case",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/delete/40?",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete",
+								"40"
+							],
+							"query": [
+								{
+									"key": "IgnoreBookings",
+									"value": "yes",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car having future bookings - Invalid Case",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/delete/100",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete",
+								"100"
+							],
+							"query": [
+								{
+									"key": "IgnoreBookings",
+									"value": "yes",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Car (Even if Bookings exist)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/delete/100?IgnoreBookings=yes",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete",
+								"100"
+							],
+							"query": [
+								{
+									"key": "IgnoreBookings",
+									"value": "yes"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "See Vehicle Bookings",
+			"item": [
+				{
+					"name": "Incomplete Details - Invalid Case",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/searchVehicleNo?",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"searchVehicleNo"
+							],
+							"query": [
+								{
+									"key": "VehicleNo",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Not Found - Invalid Case",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/searchVehicleNo?VehicleNo=11",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"searchVehicleNo"
+							],
+							"query": [
+								{
+									"key": "VehicleNo",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle and Booking Details ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://car-rental-wp.herokuapp.com/searchVehicleNo?VehicleNo=1",
+							"protocol": "https",
+							"host": [
+								"car-rental-wp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"searchVehicleNo"
+							],
+							"query": [
+								{
+									"key": "VehicleNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
