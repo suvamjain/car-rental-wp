@@ -30,7 +30,7 @@ app.use((req, res, next)=> {
 
 app.get('/', function (req, res) {
     console.log("HTTP GET Request");
-    res.status(200).json({id: "1", message: "You have reached the Home page of Car Rental Agency API made by Suvam Jain"});
+    res.redirect('https://github.com/suvamjain/car-rental-wp/blob/master/README.md');
 });
 
 //1. Add new cars 
